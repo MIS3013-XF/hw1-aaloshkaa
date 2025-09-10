@@ -15,7 +15,35 @@ namespace HW1a_Sales
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello HW1");
+            // initial prompt to ask user
+            Console.WriteLine("What is the name of the item you are purchasing?");
+            String item = Console.ReadLine();
+
+            //second prompt to figure out item amount 
+            Console.WriteLine("How many " + item + "s do you want to buy?");
+            Double itemAmt = Convert.ToDouble(Console.ReadLine());
+
+            Console.WriteLine("What is the cost of the " + item + "?");
+            Double itemCost = Convert.ToDouble(Console.ReadLine());
+
+            //constant sales tax variable 
+            const Double salesTax = 0.085;
+           
+            //calculate subtotal
+            Double subtotal = itemAmt * itemCost;
+
+            //calculate subtax amount 
+            Double subtax = subtotal * salesTax;
+
+            //calculate total
+            Double total = subtotal + subtax;
+
+            //this is for subtotal, sales tax, and total.
+            Console.WriteLine("Your subtotal is $" + subtotal + ".");
+            Console.WriteLine("Your Sales Tax is $" + subtax + ".");
+            Console.WriteLine("Your total is $" + total + ".");
+
+
         }
     }
 }
