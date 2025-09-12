@@ -40,10 +40,11 @@ namespace HW1b_Grade
             Double finalGrade = Convert.ToDouble(Console.ReadLine());
 
             //calculate the grade according to the syllabus 
+            // I referenced the syllabus for the grade distribution 
+           
+            Double overallGrade = (homeworkGrade*0.20) + (participationGrade*0.15) +(quizzesGrade*0.15) + (midtermGrade*0.25) + (finalGrade*0.25);
 
-            Double overallGrade = 0;
-
-            Console.WriteLine(firstName + " " + lastName + " your overall grade is " + overallGrade);
+            Console.WriteLine(firstName + " " + lastName + " (" + studentID + "), " + " your final grade is " + overallGrade.ToString("F2") + "%");
 
         }
     }
